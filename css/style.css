@@ -78,3 +78,45 @@ footer h6 {
     margin: 0;
     letter-spacing: 3px;
 }
+
+nav {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    user-select: none;
+    background-color: white;
+}
+nav > div {
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    padding-left: 20px;
+    background-color: #0f6090;
+}
+nav > div > ul {
+    margin: 0;
+    padding: 0;
+}
+nav > div > ul > li {
+    height: 50px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+    line-height: 50px;
+    padding-left: 10px;
+    border-top: solid 1px grey;
+}        
+nav > div > ul > li:last-child {
+    border-bottom: solid 1px grey;
+}            
+nav > div > ul > li:hover, nav > div > ul > li.selected {
+    background-color: #d9e4eb;
+}
+
+.body {
+    margin-left: 200px;
+}
+    
