@@ -1,0 +1,31 @@
+.side-menu {
+    z-index: 10;
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    margin-top: 50px;
+    user-select: none;
+    background: white;
+    border-right: solid 1px $lightGreyColor;    
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            height: 50px;
+            cursor: pointer;
+            list-style: none;
+            font-weight: bold;
+            line-height: 50px;
+            padding-left: 10px;
+            border-top: solid 1px grey;
+            &:last-child {
+                border-bottom: solid 1px grey;
+            }
+            &:hover, .selected {
+                background-color: $mainLightColor;
+            }            
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.top-menu {
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    color: $lightColor;
+    background: $darkColor;
+    div {
+        min-width: 150px;        
+        background-color: $mainColor;
+        h3 {
+            color: white;
+            line-height: 50px;
+            font-weight: bold;
+            padding-left: 10px; 
+            letter-spacing: 3px;
+        }
+    }
+    img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .name {
+        padding-right: 20px;
+        width: 100%;
+        text-align: right;
+        line-height: 50px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,21 @@
+header {
+    padding-top: 10px;
+    text-align: center;
+    background-color: white;
+    .brand {
+        display: flex;
+        .what-we-do {
+            width: 40%;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+            font-family: fantasy;
+        }
+        .how-we-do {
+            width: 60%;
+        }
+    }    
+    img {
+        width: 100%;
+    }
+}

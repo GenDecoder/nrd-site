@@ -1,0 +1,19 @@
+.card {
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: solid 2px rgba(140, 158, 171, 0.49);
+    border-bottom: solid 10px;
+    padding-bottom: 0;
+     h4 {    
+        letter-spacing: 2px;
+        font-family: fantasy;
+    }
+    h6 {    
+        letter-spacing: 1px;    
+    }
+    img {
+        width: 100%;
+    }
+}
