@@ -1,0 +1,66 @@
+.modal {
+    top: 0;
+    z-index: 10;
+    width: 300px;
+    position: fixed;
+    border: solid 1px black;
+    .modal-header {
+        height: 50px;
+        color: white;
+        font-weight: bold;        
+        text-align: center;        
+        background-color: black;
+        h5 {
+            line-height: 50px;
+        }
+    }
+    .modal-content {
+        background-color: white;
+        padding: 15px;
+        input, textarea {
+            margin: 0;
+            width: 100%;            
+            border-radius: 0;
+            &:focus {
+                border-color: #615a5a;
+            }
+        }
+        input {
+            margin-bottom: 10px;
+        }
+        textarea {
+            resize: none;
+            height: 200px;            
+        }
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+    }
+    .modal-footer {
+        height: 50px;
+        display: flex;
+        cursor: pointer;
+        line-height: 50px;
+        font-weight: bold;
+        text-align: center;
+        .send-btn {
+            width: 100%;
+            color: white;            
+            background-color: black;
+        }
+        .cancel-btn {
+            width: 100%;
+            background-color: #dbd9d9;
+        }
+    }
+}
+
+.modal-back-drop {
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: fixed;    
+    background-color: rgba(105, 98, 98, 0.24);
+}

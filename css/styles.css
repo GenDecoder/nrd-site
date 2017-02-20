@@ -22,6 +22,19 @@ h1, h2, h3, h4, h5, h6 {
 .divider {
   border: solid 1px rgba(167, 163, 163, 0.44); }
 
+.mask {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(105, 98, 98, 0.24); }
+  .mask img {
+    width: 40px;
+    height: 40px;
+    margin-top: 50%; }
+
 header {
   padding-top: 10px;
   text-align: center;
@@ -65,6 +78,60 @@ footer {
     margin: 0;
     letter-spacing: 3px; }
 
+.modal {
+  top: 0;
+  z-index: 10;
+  width: 300px;
+  position: fixed;
+  border: solid 1px black; }
+  .modal .modal-header {
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: black; }
+    .modal .modal-header h5 {
+      line-height: 50px; }
+  .modal .modal-content {
+    background-color: white;
+    padding: 15px; }
+    .modal .modal-content input, .modal .modal-content textarea {
+      margin: 0;
+      width: 100%;
+      border-radius: 0; }
+      .modal .modal-content input:focus, .modal .modal-content textarea:focus {
+        border-color: #615a5a; }
+    .modal .modal-content input {
+      margin-bottom: 10px; }
+    .modal .modal-content textarea {
+      resize: none;
+      height: 200px; }
+    .modal .modal-content .required {
+      color: red;
+      font-weight: bold; }
+  .modal .modal-footer {
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center; }
+    .modal .modal-footer .send-btn {
+      width: 100%;
+      color: white;
+      background-color: black; }
+    .modal .modal-footer .cancel-btn {
+      width: 100%;
+      background-color: #dbd9d9; }
+
+.modal-back-drop {
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(105, 98, 98, 0.24); }
+
 .top-menu {
   z-index: 10;
   width: 100%;
@@ -86,10 +153,8 @@ footer {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-left: 20px; }
+    margin: 10px 10px 0 10px; }
   .top-menu .name {
-    padding-right: 20px;
     width: 100%;
     text-align: right;
     line-height: 50px;

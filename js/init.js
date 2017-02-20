@@ -1,5 +1,5 @@
 $(function() {
-    var menuOn = false;
+    var menuOn = false;    
     var sideMenu = $('#sideMenu');
     var toggleMenu = $('#toggleMenu');
     var mainContent = $('#mainContent');
@@ -32,4 +32,60 @@ $(function() {
     });
     onMoveMain();
     onToggleMenu();
+
+    /**
+     * Simple Modal Implementation for a Web Site
+     */
+    var mask = $('#mask');
+
+    var modal = $('#modal');
+    var modalSendBtn = $('#modalSendBtn');
+    var modalTrigger = $('#modalTrigger');
+    var modalBackDrop = $('#modalBackDrop');
+    var modalCancelBtn = $('#modalCancelBtn');
+    var modalEmailField = $('#modalEmailField');
+    var modalMessageField = $('#modalMessageField');
+    var toggleModal =  function() {        
+        modal.toggle();
+        modalBackDrop.toggle();       
+        setModalBox();
+        clearModalFields();
+    };
+    var setModalBox = function() {
+        modal.css({
+            left: $(window).width()/2 - modal.width()/2,
+            top: $(window).height()/2 - modal.height()/2
+        });
+    };
+    var clearModalFields = function() {
+        modalEmailField.val('');
+        modalMessageField.val('');
+    };
+    var isFormValid = function() {
+
+    };
+    modalTrigger.on('click', toggleModal);
+    modalBackDrop.on('click', toggleModal);
+    modalCancelBtn.on('click', toggleModal);
+
+    modalSendBtn.on('click', function() {
+        var isValid = modal[0].checkValidity();
+        if (isValid) {
+            mask.show();
+            modal.append(mask);
+            setTimeout(function() {
+                mask.hide();
+                toggleModal();
+            }, 2000);        
+        } else {
+            
+        }
+    });
+
+    modal.hide();    
+    modalBackDrop.hide();
+
+    /**
+     * Mask Management
+     */
 });

@@ -52,6 +52,8 @@
       New Random Development
     </h6>
 
+    <img id="modalTrigger" src="./images/util/message.png">
+
   </div>
 
   <div class="main" id="mainContent">
@@ -177,7 +179,30 @@
     <footer>      
       <h6> © 2017 | NRD Design | All Rights Reserved </h6>
     </footer>
-  </div>  
+  </div>
+
+  <div class="modal-back-drop" id="modalBackDrop"></div>
+
+  <form class="modal" id="modal">
+    <div class="modal-header">
+      <h5>Send us a message</h5>
+    </div>
+    <div class="modal-content">
+      <h6> <span class="required">*</span> Email  <span class="required"> Email Required </span> </h6>
+      <input type="email" name="email" id="modalEmailField" required>
+
+      <h6> <span class="required">*</span> Message  <span class="required">Required Field</span> </h6>
+      <textarea type="text" name="message" id="modalMessageField" required></textarea>
+    </div>
+    <div class="modal-footer">
+      <div class="send-btn" id="modalSendBtn">Send</div>
+      <div class="cancel-btn" id="modalCancelBtn">Cancel</div>
+    </div>
+  </form>
+
+  <div class="mask" id="mask">
+    <img src="./images/util/loading.gif">
+  </div>
 
   <script src="./lib/jquery-3.1.1.min.js"></script>
   <script src="./js/menu.js"></script>
