@@ -23,9 +23,12 @@
             &:last-child {
                 border-bottom: solid 1px grey;
             }
-            &:hover, .selected {
+            &:hover {
                 background-color: $mainLightColor;
-            }            
+            }
+            &.selected {
+                background-color: $mainLightColor;
+            }
         }
     }
 }

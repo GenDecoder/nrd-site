@@ -1,6 +1,5 @@
 .main {
-  padding-top: 50px;
-  margin-left: 150px; }
+  padding-top: 50px; }
 
 body {
   overflow-x: hidden; }
@@ -122,5 +121,7 @@ footer {
       border-top: solid 1px grey; }
       .side-menu ul li:last-child {
         border-bottom: solid 1px grey; }
-      .side-menu ul li:hover, .side-menu ul li .selected {
+      .side-menu ul li:hover {
+        background-color: #e5dcd9; }
+      .side-menu ul li.selected {
         background-color: #e5dcd9; }
