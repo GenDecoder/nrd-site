@@ -1,4 +1,4 @@
-$(function() {
+$( window ).on( "load", function() {
     var menuOn = false;    
     var sideMenu = $('#sideMenu');
     var toggleMenu = $('#toggleMenu');
@@ -37,19 +37,22 @@ $(function() {
      * Simple Modal Implementation for a Web Site
      */
     var mask = $('#mask');
-
     var modal = $('#modal');
+    var modalContent = $('#modalContent');
     var modalSendBtn = $('#modalSendBtn');
     var modalTrigger = $('#modalTrigger');
     var modalBackDrop = $('#modalBackDrop');
+    var emailErrorText = $('#emailErrorText');
     var modalCancelBtn = $('#modalCancelBtn');
     var modalEmailField = $('#modalEmailField');
+    var messageErrorText = $('#messageErrorText');
     var modalMessageField = $('#modalMessageField');
     var toggleModal =  function() {        
         modal.toggle();
         modalBackDrop.toggle();       
         setModalBox();
         clearModalFields();
+        mask.hide();
     };
     var setModalBox = function() {
         modal.css({
@@ -60,32 +63,29 @@ $(function() {
     var clearModalFields = function() {
         modalEmailField.val('');
         modalMessageField.val('');
-    };
-    var isFormValid = function() {
-
-    };
+    };    
     modalTrigger.on('click', toggleModal);
     modalBackDrop.on('click', toggleModal);
     modalCancelBtn.on('click', toggleModal);
 
     modalSendBtn.on('click', function() {
-        var isValid = modal[0].checkValidity();
-        if (isValid) {
+        if (modal[0].checkValidity()) {
             mask.show();
-            modal.append(mask);
+            modalContent.append(mask);
             setTimeout(function() {
                 mask.hide();
                 toggleModal();
-            }, 2000);        
+            }, 2000);  
         } else {
-            
+            !modalEmailField[0].checkValidity() && emailErrorText.show();
+            !modalMessageField[0].checkValidity() && messageErrorText.show();
+            modalEmailField.on('change', function() {
+                this.checkValidity() ? emailErrorText.hide() : emailErrorText.show();
+            });
+            modalMessageField.on('change', function() {
+                this.checkValidity() ? messageErrorText.hide() : messageErrorText.show();
+            });
         }
-    });
-
-    modal.hide();    
-    modalBackDrop.hide();
-
-    /**
-     * Mask Management
-     */
+    });    
+    mask.hide();
 });

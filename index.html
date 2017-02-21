@@ -187,11 +187,11 @@
     <div class="modal-header">
       <h5>Send us a message</h5>
     </div>
-    <div class="modal-content">
-      <h6> <span class="required">*</span> Email  <span class="required"> Email Required </span> </h6>
+    <div class="modal-content" id="modalContent">
+      <h6> <span class="required">*</span> Email  <span class="error-message" id="emailErrorText"> Email Required </span> </h6>
       <input type="email" name="email" id="modalEmailField" required>
 
-      <h6> <span class="required">*</span> Message  <span class="required">Required Field</span> </h6>
+      <h6> <span class="required">*</span> Message  <span class="error-message" id="messageErrorText">Required Field</span> </h6>
       <textarea type="text" name="message" id="modalMessageField" required></textarea>
     </div>
     <div class="modal-footer">
@@ -200,9 +200,7 @@
     </div>
   </form>
 
-  <div class="mask" id="mask">
-    <img src="./images/util/loading.gif">
-  </div>
+  <div class="mask" id="mask"></div>
 
   <script src="./lib/jquery-3.1.1.min.js"></script>
   <script src="./js/menu.js"></script>

@@ -24,16 +24,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .mask {
   top: 0;
+  left: 0;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  display: none;
   position: absolute;
   text-align: center;
-  background-color: rgba(105, 98, 98, 0.24); }
-  .mask img {
-    width: 40px;
-    height: 40px;
-    margin-top: 50%; }
+  background: url("../images/util/loading.gif") no-repeat center center #151313; }
 
 header {
   padding-top: 10px;
@@ -82,6 +79,7 @@ footer {
   top: 0;
   z-index: 10;
   width: 300px;
+  display: none;
   position: fixed;
   border: solid 1px black; }
   .modal .modal-header {
@@ -93,8 +91,9 @@ footer {
     .modal .modal-header h5 {
       line-height: 50px; }
   .modal .modal-content {
-    background-color: white;
-    padding: 15px; }
+    padding: 15px;
+    position: relative;
+    background-color: white; }
     .modal .modal-content input, .modal .modal-content textarea {
       margin: 0;
       width: 100%;
@@ -109,6 +108,10 @@ footer {
     .modal .modal-content .required {
       color: red;
       font-weight: bold; }
+    .modal .modal-content .error-message {
+      color: red;
+      float: right;
+      display: none; }
   .modal .modal-footer {
     height: 50px;
     display: flex;
@@ -129,6 +132,7 @@ footer {
   z-index: 10;
   width: 100%;
   height: 100%;
+  display: none;
   position: fixed;
   background-color: rgba(105, 98, 98, 0.24); }
 
