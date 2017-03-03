@@ -1,3 +1,7 @@
+/**
+ *  Documentation:
+ *       
+ */
 $( window ).on( "load", function() {
     var menuOn = false;    
     var sideMenu = $('#sideMenu');
@@ -72,10 +76,10 @@ $( window ).on( "load", function() {
         if (modal[0].checkValidity()) {
             mask.show();
             modalContent.append(mask);
-            setTimeout(function() {
+            setTimeout(function() { // A service must be callef here
                 mask.hide();
                 toggleModal();
-            }, 2000);  
+            }, 2000);        
         } else {
             !modalEmailField[0].checkValidity() && emailErrorText.show();
             !modalMessageField[0].checkValidity() && messageErrorText.show();
@@ -88,4 +92,5 @@ $( window ).on( "load", function() {
         }
     });    
     mask.hide();
+    mask.css('position', 'absolute');
 });

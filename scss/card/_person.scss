@@ -1,0 +1,42 @@
+.person-card {    
+    width: 450px;
+    max-width: 450px;
+    border: solid 1px;
+    letter-spacing: 1px;
+    font-family: "Raleway";
+    .header {
+        height: 30px;
+        display: flex;        
+        .name {
+            width: 100%;
+            padding: 5px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: black;
+        }
+        .age {
+            width: 30px;
+            text-align: center;
+            background-color: lightgrey;
+        }
+    }
+    .content {
+        display: flex;
+        .photo {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }        
+        .description {
+            width: 100%;
+        }
+    }
+    .footer {
+        display: flex;
+        .skill {
+            
+        }
+    }
+}
