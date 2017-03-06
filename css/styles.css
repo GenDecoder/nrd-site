@@ -194,10 +194,50 @@ footer {
       .side-menu ul li.selected {
         background-color: #e5dcd9; }
 
+.p-card {
+  margin-top: 55px;
+  width: 300px;
+  padding: 10px;
+  border: solid 1px;
+  letter-spacing: 1px;
+  font-family: "Raleway";
+  box-shadow: 2px 2px 5px 1px #a2a2a2; }
+  .p-card .header {
+    padding-top: 40px;
+    text-align: center; }
+    .p-card .header img {
+      width: 100px;
+      border-radius: 50%;
+      top: -55px;
+      border: solid 2px rgba(0, 0, 0, 0.42);
+      position: absolute;
+      left: 108px; }
+    .p-card .header .name {
+      font-size: 14px;
+      font-weight: bold; }
+    .p-card .header .rol {
+      font-size: 11px;
+      font-weight: bold;
+      color: dodgerblue; }
+  .p-card .body .description {
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: normal; }
+  .p-card svg {
+    width: 30px;
+    margin-top: 5px; }
+  .p-card .title {
+    font-size: 12px;
+    font-weight: bold; }
+  .p-card .divider {
+    margin: 5px 3px;
+    border-top: solid 1px #ede9e9; }
+
 .person-card {
-  width: 450px;
+  width: 300px;
   max-width: 450px;
   border: solid 1px;
+  letter-spacing: 1px;
   font-family: "Raleway"; }
   .person-card .header {
     height: 30px;
@@ -207,6 +247,7 @@ footer {
       padding: 5px;
       color: white;
       font-size: 15px;
+      font-weight: bold;
       background-color: black; }
     .person-card .header .age {
       width: 30px;

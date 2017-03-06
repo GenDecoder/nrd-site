@@ -1,5 +1,60 @@
+.p-card {
+    margin-top: 55px;
+
+    width: 300px;
+    padding: 10px;
+    border: solid 1px;        
+    letter-spacing: 1px;
+    font-family: "Raleway";
+    box-shadow: 2px 2px 5px 1px #a2a2a2;
+    .header {
+        padding-top: 40px;
+        text-align: center;
+        img {
+            width: 100px;
+            border-radius: 50%;
+
+            top: -55px;
+            border: solid 2px rgba(0, 0, 0, 0.42);
+            position: absolute;
+            left: 108px;
+
+        }
+        .name {
+            font-size: 14px;
+            font-weight: bold
+        }
+        .rol {
+            font-size: 11px;
+            font-weight: bold;
+            color: dodgerblue;
+        }
+    }
+    .body {
+        .description {
+            margin-top: 5px;
+            font-size: 11px;            
+            font-weight: normal;
+        }       
+    }
+    // REMOVE FOOTER, BECAUSE EVERYTHING CAN BE IN THE BODY, ANYWAY MORE SECTIONS LIKE SOCIAL ARE GONNA TO BE ADDED
+    svg {
+        width: 30px;
+        margin-top: 5px;
+    }
+    
+    .title {
+        font-size: 12px;
+        font-weight: bold
+    }
+    .divider {
+        margin: 5px 3px;
+        border-top: solid 1px #ede9e9;
+    }
+}
+
 .person-card {    
-    width: 450px;
+    width: 300px;
     max-width: 450px;
     border: solid 1px;
     letter-spacing: 1px;
