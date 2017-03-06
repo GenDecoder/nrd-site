@@ -1,33 +1,48 @@
 .p-card {
-    margin-top: 55px;
-
     width: 300px;
     padding: 10px;
-    border: solid 1px;        
+    margin-top: 50px;
     letter-spacing: 1px;
     font-family: "Raleway";
+    border: solid 1px #cccccc;
     box-shadow: 2px 2px 5px 1px #a2a2a2;
     .header {
-        padding-top: 40px;
+        padding-top: 50px;
         text-align: center;
         img {
+            top: -50px;
+            left: 111px;
             width: 100px;
             border-radius: 50%;
-
-            top: -55px;
-            border: solid 2px rgba(0, 0, 0, 0.42);
             position: absolute;
-            left: 108px;
-
+            border: solid 2px #cccccc;
         }
         .name {
             font-size: 14px;
-            font-weight: bold
+            font-weight: bold;
         }
         .rol {
             font-size: 11px;
             font-weight: bold;
             color: dodgerblue;
+        }
+    }
+    .skill {
+        display: inline-block;
+        img {
+            width: 30px;
+        }        
+        .name {
+            width: 100px;
+        }
+        .level {
+            width: 100%;
+        }
+    }
+    .skills {        
+        img {
+            width: 30px;
+            margin-top: 5px;
         }
     }
     .body {
